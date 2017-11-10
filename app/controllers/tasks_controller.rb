@@ -53,7 +53,7 @@ class TasksController < ApplicationController
       if @task.update(task_params)
         # format.html { redirect_to @task, notice: 'Task was successfully updated.' }
         # commented out so that page is not redirected to task#show page
-        format.html { redirect_to tasks_url }
+        format.html { redirect_to tasks_url, notice: "Task was successfully updated." }
         # instead the task is updated on the index page and is not redirected elsewhere
         format.json { render :show, status: :ok, location: @task }
       else
