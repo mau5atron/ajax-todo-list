@@ -9,6 +9,6 @@ $(document).on('turbolinks:load', function() {
 
 
   $('.modal-footer .btn-primary').click(function() {
-    console.log('save the changes!');
+    $('.modal-body form').submit();
   }); 
 });
